@@ -17,7 +17,7 @@ void quick_sort( int* nums, int left, int right )
         
         while( i < j )
         {
-            while( i<j && nums[j]>=flag )	// 浠庡彸鍚戝乏鎵剧涓�涓皬浜巟鐨勬暟  
+            while( i<j && nums[j]>=flag )	// 从右向左找第一个小于x的数  
             {
                 j--;
             }
@@ -26,7 +26,7 @@ void quick_sort( int* nums, int left, int right )
                 nums[i++] = nums[j];
             }
         
-            while( i<j && nums[i]<flag )	// 浠庡乏鍚戝彸鎵剧涓�涓ぇ浜庣瓑浜巟鐨勬暟
+            while( i<j && nums[i]<flag )	// 从左向右找第一个大于等于x的数
             {
                 i++;
             }
@@ -44,11 +44,11 @@ void quick_sort( int* nums, int left, int right )
 void printfNums( int* nums, int numsSize )
 {
 	int i;
-	printf("\n");
 	for( i=0; i<numsSize; i++ )
 	{
 		printf("%d ", nums[i]);
 	}
+	printf("\n");
 }
 
 int main()
